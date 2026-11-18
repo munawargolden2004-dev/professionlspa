@@ -2,7 +2,7 @@ import { minPrice, maxPrice } from './services'
 
 export const business = {
   name: 'Professional Spa',
-  domain: 'https://www.thaispa.pk',
+  domain: 'https://www.professionalspa.pk',
   phone: '+92 346 4460192', // From the Google Business Profile listing
   phoneHref: 'tel:+923464460192',
   whatsapp: '923464460192', // OWNER: confirm this number is on WhatsApp

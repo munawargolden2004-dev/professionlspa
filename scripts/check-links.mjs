@@ -31,7 +31,7 @@ for (const f of htmlFiles) {
       const url = cand.trim().split(/\s+/)[0]
       if (!url) continue
       checked++
-      const local = url.startsWith('/') ? url : url.startsWith('https://www.thaispa.pk') ? url.replace('https://www.thaispa.pk', '') : null
+      const local = url.startsWith('/') ? url : url.startsWith('https://www.professionalspa.pk') ? url.replace('https://www.professionalspa.pk', '') : null
       if (local && !exists(local)) bad(`broken srcset image: ${url}`)
     }
   }
@@ -41,13 +41,13 @@ for (const f of htmlFiles) {
     if (!url || /^(tel:|mailto:|data:|javascript:)/.test(url)) continue
     checked++
     if (/^https?:\/\//.test(url)) {
-      if (!url.startsWith('https://www.thaispa.pk')) {
+      if (!url.startsWith('https://www.professionalspa.pk')) {
         const host = new URL(url).host
         external.set(host, (external.get(host) || 0) + 1)
         if (url.startsWith('http://')) bad(`insecure http link: ${url.slice(0, 70)}`)
         continue
       }
-      url = url.replace('https://www.thaispa.pk', '') || '/'
+      url = url.replace('https://www.professionalspa.pk', '') || '/'
     }
     if (url.startsWith('#')) {
       if (url !== '#' && !ids.has(url.slice(1))) bad(`anchor ${url} has no matching id`)

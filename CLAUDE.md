@@ -56,7 +56,7 @@ Do not hardcode prices or hours in a component.
 - Phone: +92 346 4460192 (from the Google listing). WhatsApp is set to the same number, **owner to confirm**.
 - Google listing address matches: Plaza #40, Civic Center, Bahria Town Phase 4, open 24 hours.
 - Email: info@thaispa.pk. **Unconfirmed**: mailbox not created.
-- Domain in config: https://www.thaispa.pk. **Unconfirmed**: may change to a Professional Spa domain.
+- Domain in config: https://www.professionalspa.pk. **Unconfirmed**: may change to a Professional Spa domain.
 - geo lat/lng: null. Owner to supply the exact pin from Google Maps. Do not invent it.
 - Share image: `/images/og-thai-spa.jpg`. Replace with a 1200×630 image for Professional Spa.
 - Service areas for schema: Bahria Town, Civic Center, Rawalpindi, Islamabad.

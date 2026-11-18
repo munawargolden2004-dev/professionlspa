@@ -1,4 +1,4 @@
-# Launching thaispa.pk
+# Launching professionalspa.pk
 
 ## Before you deploy (owner to-do)
 - [ ] Exact Google Maps pin: fill `geo` and `social.googleMaps` in `src/data/business.js`
@@ -13,9 +13,9 @@
 ## Deploy (Netlify, simplest)
 1. Create a free account at netlify.com, then Add new site, Deploy manually (or connect a GitHub repo).
 2. Build command `npm run build`, publish directory `dist`. (Or drag the built `dist` folder in.)
-3. Domain settings, Add custom domain `thaispa.pk` and also `www.thaispa.pk`. At your domain registrar set the DNS records Netlify shows
+3. Domain settings, Add custom domain `professionalspa.pk` and also `www.professionalspa.pk`. At your domain registrar set the DNS records Netlify shows
    (an A record for the root domain and a CNAME for `www`). HTTPS is issued automatically within minutes.
-4. Make `https://www.thaispa.pk` the primary domain (the site uses the www address everywhere) and redirect the bare `thaispa.pk` to it.
+4. Make `https://www.professionalspa.pk` the primary domain (the site uses the www address everywhere) and redirect the bare `professionalspa.pk` to it.
 
 Vercel works the same way (Framework: Vite, build `npm run build`, output `dist`).
 
@@ -23,15 +23,15 @@ The build also writes `dist/_redirects` and ships `public/_headers` and `netlify
 one URL (`/services`, never `/services/`) and caches images and scripts. `vercel.json` does the same on Vercel.
 
 ## First five minutes after going live
-- [ ] Open `https://www.thaispa.pk`, `/services`, `/prices`, `/contact` and a blog post on your phone, on mobile data
+- [ ] Open `https://www.professionalspa.pk`, `/services`, `/prices`, `/contact` and a blog post on your phone, on mobile data
 - [ ] Tap Call and WhatsApp from the bottom bar; submit the contact form once to see WhatsApp open
-- [ ] `https://www.thaispa.pk/sitemap.xml` and `/robots.txt` open
-- [ ] `https://thaispa.pk` redirects to `https://www.thaispa.pk`
+- [ ] `https://www.professionalspa.pk/sitemap.xml` and `/robots.txt` open
+- [ ] `https://professionalspa.pk` redirects to `https://www.professionalspa.pk`
 - [ ] A made-up address such as `/nothing-here` shows the "page not found" page
 
 ## After it is live
-1. Search Console (search.google.com/search-console): add the property `thaispa.pk` (Domain type), verify via DNS, then
-   Sitemaps, submit `https://www.thaispa.pk/sitemap.xml`.
+1. Search Console (search.google.com/search-console): add the property `professionalspa.pk` (Domain type), verify via DNS, then
+   Sitemaps, submit `https://www.professionalspa.pk/sitemap.xml`.
 2. Run two pages through Google's Rich Results Test and the URL Inspection tool: `/` and `/services/thai-massage`.
 3. Optional: set `VITE_GA_ID` for Google Analytics and `VITE_FORM_ENDPOINT` for emailed bookings, then rebuild.
 
@@ -40,7 +40,7 @@ one URL (`/services`, never `/services/`) and caches images and scripts. `vercel
 - [ ] Primary category **Massage spa**
 - [ ] Address and phone identical to the website: Plaza #40, Civic Center, Bahria Town Phase 4, Rawalpindi, +92 346 4460192
 - [ ] Opening hours: open 24 hours, 7 days (same as the website)
-- [ ] Website link `https://www.thaispa.pk`
+- [ ] Website link `https://www.professionalspa.pk`
 - [ ] 15+ real photos (entrance, reception, rooms, linen, oils, stones). No stock, no AI pictures of the premises
 - [ ] Services with prices, copied from the website price list
 - [ ] Ask every happy client for a review (see below)

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.thaispa.pk/sitemap.xml
+Sitemap: https://www.professionalspa.pk/sitemap.xml
