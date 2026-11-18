@@ -1,0 +1,80 @@
+/* Service detail page: the card photo as a banner, and a small frosted-glass price box. */
+
+/* Compact frosted-glass price box, sits beside the description and stays in view while scrolling */
+.svc-price-glass {
+  position: sticky;
+  top: calc(var(--hh, 72px) + 24px);
+  justify-self: end;
+  width: 100%;
+  max-width: 340px;
+  padding: 20px 22px;
+  border-radius: 24px;
+  color: #0f1f1a;
+  background: rgba(255, 255, 255, .38);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, .6);
+  box-shadow: 0 18px 40px rgba(15, 31, 26, .12);
+}
+
+.svc-price-eyebrow {
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--v2-rose-deep, #b0456b);
+  margin: 0;
+}
+
+.svc-price-title {
+  font: 400 22px/1.2 var(--v2-serif, Georgia, serif);
+  margin: 8px 0 14px;
+  color: #0f1f1a;
+}
+
+.svc-price-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.svc-price-table th,
+.svc-price-table td {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(15, 31, 26, .14);
+  font-size: 14px;
+  text-align: left;
+  color: #0f1f1a;
+}
+
+.svc-price-table td {
+  text-align: right;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.svc-price-actions {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.svc-price-actions .v2-btn {
+  padding: 10px 14px;
+  font-size: 14px;
+}
+
+.svc-price-note {
+  margin: 14px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(15, 31, 26, .7);
+}
+
+/* Light entrance: the price box rises in once, quickly */
+@keyframes svc-rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.svc-price-glass { animation: svc-rise .6s cubic-bezier(.2, .8, .2, 1) both; }
+@media (prefers-reduced-motion: reduce) { .svc-price-glass { animation: none; } }
+
+@media (max-width: 960px) {
+  .svc-price-glass { justify-self: stretch; max-width: none; position: static; }
+}

@@ -1,0 +1,41 @@
+/* Pain map page. Scoped under .v2 so it follows the light theme tokens. */
+
+.v2 .pm-toggle { display: inline-flex; gap: 8px; padding: 6px; border-radius: var(--r-pill); background: var(--v2-rose-soft); margin-bottom: 28px; }
+.v2 .pm-tab {
+  min-height: 44px; padding: 0 20px; border: 0; border-radius: var(--r-pill); background: transparent; color: var(--v2-plum);
+  font: 600 14px/1 var(--font); cursor: pointer;
+}
+.v2 .pm-tab.is-on { background: var(--v2-plum); color: var(--v2-cream); }
+.v2 .pm-tab:focus-visible, .v2 .pm-dot:focus-visible { outline: 3px solid var(--v2-rose); outline-offset: 3px; }
+
+.v2 .pm-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: start; }
+
+.v2 .pm-figure { position: relative; margin: 0; border-radius: var(--r-lg); overflow: hidden; background: #f1eefb; }
+.v2 .pm-figure img { display: block; width: 100%; height: auto; }
+
+.v2 .pm-dot {
+  position: absolute; width: 24px; height: 24px; margin: -12px 0 0 -12px; border-radius: 50%;
+  border: 2px solid #ffffff; background: var(--v2-rose); box-shadow: 0 0 0 6px rgba(23, 19, 43, .25);
+  cursor: pointer; padding: 0;
+}
+.v2 .pm-dot.is-on { box-shadow: 0 0 0 10px rgba(23, 19, 43, .35); }
+.v2 .pm-label {
+  position: absolute; left: 30px; top: 50%; transform: translateY(-50%); white-space: nowrap;
+  padding: 6px 12px; border-radius: var(--r-pill); background: #ffffff; color: var(--v2-plum);
+  font: 600 13px/1 var(--font); box-shadow: 0 6px 18px -8px rgba(15, 31, 26, .35);
+  opacity: 0; pointer-events: none; transition: opacity .25s;
+}
+.v2 .pm-dot:hover .pm-label, .v2 .pm-dot:focus-visible .pm-label, .v2 .pm-dot.is-on .pm-label { opacity: 1; }
+.v2 .pm-dot.is-on .pm-label { opacity: 1; }
+
+.v2 .pm-panel { border-radius: var(--r-lg); padding: clamp(24px, 3vw, 40px); background: #ffffff; box-shadow: inset 0 0 0 1px rgba(15, 31, 26, .08); }
+.v2 .pm-title { margin-top: 10px; }
+.v2 .pm-photo { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r-md); margin: 22px 0; }
+.v2 .pm-text { font-size: 16px; color: var(--v2-plum-2); line-height: 1.6; }
+.v2 .pm-rec { margin-top: 16px; font-size: 16px; color: var(--v2-plum); }
+.v2 .pm-note { margin-top: 22px; font-size: 13px; color: var(--v2-plum-2); line-height: 1.6; }
+
+@media (max-width: 860px) {
+  .v2 .pm-grid { grid-template-columns: 1fr; }
+  .v2 .pm-label { display: none; }
+}

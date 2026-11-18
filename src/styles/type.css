@@ -1,0 +1,57 @@
+/* One type scale for the v2 pages. Fixed sizes replace the scattered clamp() values, so text
+   reads at the same size on every page. Body text is never below 14px. */
+
+.v2 {
+  --t-xs: 12px;   /* eyebrows, chips, captions */
+  --t-sm: 14px;   /* small text, table cells, card descriptions */
+  --t-md: 16px;   /* body text */
+  --t-lg: 18px;   /* lede paragraphs */
+  --t-h3: 26px;   /* card and sub headings */
+  --t-h2: 44px;   /* section headings */
+  --t-h1: 72px;   /* page headings */
+  font-size: var(--t-md);
+  line-height: 1.6;
+}
+
+.v2 p,
+.v2 li,
+.v2 dd,
+.v2 dt,
+.v2 td,
+.v2 th,
+.v2 address { font-size: var(--t-md); line-height: 1.6; }
+
+.v2 small,
+.v2 .v2-mono,
+.v2 .v2-stats span,
+.v2 .v2-eyebrow,
+.v2 .v2-gallery-cap,
+.v2 .svc-chips span,
+.v2 .kicker,
+.v2 .v2-pain-cap,
+.v2 .v2-pain-tag { font-size: var(--t-xs); line-height: 1.4; }
+
+.v2 .v2-lede,
+.v2 .v2-lead { font-size: var(--t-lg); line-height: 1.6; }
+
+.v2 .svc-desc,
+.v2 .svc-btn,
+.v2 .v2-note { font-size: var(--t-sm); line-height: 1.55; }
+
+.v2 h1,
+.v2 .v2-h1 { font-size: var(--t-h1); line-height: 1; }
+.v2 h2,
+.v2 .v2-h2,
+.v2 .v2-h3 { font-size: var(--t-h2); line-height: 1.05; }
+.v2 h3,
+.v2 .svc-title { font-size: var(--t-h3); line-height: 1.1; }
+
+/* Form labels and small badges were 10-11px. Raise them to the scale. */
+.v2 label,
+.v2 .v2-badge,
+.v2 .v2-badge span,
+.v2 .v2-glass span { font-size: var(--t-sm); line-height: 1.4; }
+
+@media (max-width: 760px) {
+  .v2 { --t-h1: 52px; --t-h2: 36px; --t-h3: 24px; }
+}
